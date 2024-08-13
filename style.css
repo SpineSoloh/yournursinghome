@@ -1,0 +1,655 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures the header is above other content */
+    background-color: white; /* Set background color to avoid transparency issues */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+}
+
+/* Header Section */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 2px solid #eee;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.nav-items .socialMedia {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-items .socialMedia li a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav-items .socialMedia li a:hover {
+    color: #28a745;
+    cursor: pointer;
+}
+
+
+/* Navigation Section */
+.nav1 nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #28a745;
+    border-bottom: 2px solid #eee;
+    position: sticky;
+    top: 0; /* Adjust based on where you want it to stick */
+    z-index: 999; /* Ensure it stays on top of other elements */
+}
+
+.nav1 nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav1 nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.nav1 nav ul li a:hover {
+    color: #fe0;
+}
+
+.nav1 .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav1 .header-right input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.nav1 .header-right a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slider .slide:first-child {
+    opacity: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding-top: 200px; /* Adjust to vertically center the content */
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: bold;
+    transition: color 0.3s;
+    animation: fadeInSlideIn 2s ease-in-out;
+    opacity: 0; /* Initially hidden */
+    animation-fill-mode: forwards; /* Retains the final state after the animation */
+}
+
+.hero-content h1:hover {
+    color: #28a745;
+}
+
+.hero-content p {
+    margin: 20px 0;
+    font-size: 14px;
+    color: #333;
+    animation: fadeInSlideIn 3s ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('nurse4.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+}
+
+@keyframes fadeInSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End in the original position */
+    }
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero-content .search {
+    margin-top: 20px;
+}
+
+.hero-content .search input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.hero-content .search button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #333;
+    border: none;
+    cursor: pointer;
+}
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.services-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: lightcyan;
+}
+
+.services-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.services-content p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.services-content a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+.services-content a:hover {
+    color: #28a745;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.card {
+    background-color: lightgray;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 23%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: lightcyan;
+    color: #333;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.card-content .btn:hover {
+    color: #fe0;
+}
+
+/* Awards Section */
+.awards-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.award img {
+    max-width: 100px;
+}
+
+/* Advertisement Section */
+.ad-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ad-video {
+    flex: 1 1 40%;
+    max-width: 320px;
+    margin-right: 20px;
+}
+
+.ad-statement {
+    flex: 1 1 50%;
+}
+
+.ad-statement h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ad-statement p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Find Care Section */
+#find-care {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.find-care-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.find-care-content {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.search-bar {
+    display: flex;
+    margin-top: 20px;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    width: 80%;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.email-input,
+.description-input {
+    margin-top: 10px;
+}
+
+.description-input textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Map styles */
+#map {
+    flex: 1;
+    max-width: 400px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+/* Footer Section */
+footer {
+    padding: 50px 20px;
+    background-color: lightgray;
+    color: #fe0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo img {
+    max-width: 100px;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-social-newsletter {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    gap: 20px;
+}
+
+.footer-social-career {
+    text-align: center;
+}
+
+.footer-social-career a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.social-media-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.social-media-icons li a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-newsletter h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-newsletter a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #28a745; /* Button background color */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #28a745; /* Darker color on hover */
+}
+
+#scrollToTopBtn i {
+    font-size: 20px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container,
+    .nav1 nav ul,
+    .hero-content,
+    .services-content,
+    .card-container,
+    .ad-content,
+    .find-care-container,
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-items .socialMedia {
+        justify-content: center;
+    }
+
+    .hero-content {
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .ad-video,
+    .ad-statement {
+        width: 100%;
+    }
+
+    .find-care-container {
+        flex-direction: column;
+    }
+
+    #map {
+        margin: 20px auto 0;
+        max-width: 100%;
+    }
+
+    .footer-social-newsletter {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Reduce spacing in nav1 for mobile and tablet */
+@media (max-width: 768px) {
+    .nav1 ul li {
+        margin-right: 5px; /* Adjust this value to decrease space */
+        margin-left: 5px;  /* Adjust this value to decrease space */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content h3 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+}
+
+/* Hero Content Styling for Mobile and Tablet */
+@media (max-width: 768px) {
+    .hero-content {
+        position: relative;
+        top: auto; /* Resetting any top positioning */
+        left: auto; /* Resetting any left positioning */
+        transform: none; /* Resetting transform */
+        margin: 20px auto; /* Centering the hero content */
+        text-align: center; /* Centering text */
+        padding: 10px; /* Adding padding to ensure it doesn't touch the edges */
+        max-width: 100%; /* Ensuring it takes the full width of the container */
+    }
+
+    .hero-content h1 {
+        font-size: 24px; /* Smaller font size for mobile screens */
+        line-height: 1.2; /* Adjusted line height */
+        margin-bottom: 15px; /* Adding margin below the header */
+    }
+
+    .hero-content p {
+        font-size: 14px; /* Adjusted paragraph font size */
+        margin-bottom: 20px; /* Adding margin below the paragraph */
+    }
+
+    .hero-content .search {
+        display: block; /* Ensuring search div stays within the hero-content */
+        margin: 20px auto 0; /* Centering the search bar */
+        max-width: 100%; /* Ensuring the search bar is within bounds */
+    }
+
+    .hero-content .search input[type="text"] {
+        width: 70%; /* Making the input field take up most of the width */
+        margin-bottom: 10px; /* Space below the input field */
+    }
+
+    .hero-content .search button {
+        width: auto; /* Allowing the button to size naturally */
+        margin-top: 10px; /* Adding space above the button */
+    }
+}
+
+/* Further Adjustments for Very Small Screens */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 20px; /* Further reducing font size */
+    }
+
+    .hero-content p {
+        font-size: 12px; /* Smaller paragraph text */
+    }
+
+    .hero-content .search input[type="text"] {
+        width: 100%; /* Input field takes full width on small screens */
+    }
+
+    .hero-content .search button {
+        width: 100%; /* Button takes full width on small screens */
+    }
+}
