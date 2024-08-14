@@ -31,6 +31,12 @@ header {
     border-bottom: 2px solid #eee;
 }
 
+.header-right input[type="text"] {
+    width: 100%; /* Full width for the search bar */
+    padding: 8px; /* Adjust padding */
+    font-size: 16px; /* Adjust font size */
+}
+
 .logo img {
     max-width: 100px;
 }
@@ -71,6 +77,11 @@ header {
     gap: 20px;
 }
 
+.nav1 ul li a {
+    font-size: 16px; /* Adjust font size for better readability */
+    text-align: left; /* Align text to the left */
+}
+
 .nav1 nav ul li a {
     text-decoration: none;
     color: #333;
@@ -98,6 +109,55 @@ header {
     text-decoration: none;
     color: #333;
     font-size: 14px;
+}
+
+/* For mobile phones (425px and below) */
+@media only screen and (max-width: 425px) {
+    .nav1 {
+        display: block; /* Ensure the nav1 takes up the full width */
+        padding: 30px; /* Add padding for spacing */
+    }
+
+    .nav1 nav {
+        display: flex;
+        flex-direction: column; /* Stack the nav items and search bar vertically */
+        align-items: flex-start;
+    }
+
+    .nav1 ul {
+        padding: 0;
+        margin: 0;
+        list-style: none; /* Remove default list styling */
+        display: flex;
+        flex-direction: column; /* Stack list items vertically */
+        width: 100%; /* Ensure the list takes up the full width */
+    }
+
+    .nav1 ul li {
+        padding: 5px 10px; /* Adjust the values as needed */
+        margin: 0; /* Remove any additional margin if present */
+    }
+
+    .header-right {
+        display: flex;
+        flex-direction: column; /* Stack the links and search bar vertically */
+        width: 100%; /* Ensure the container takes up the full width */
+    }
+
+    .header-right a {
+        margin-bottom: 10px; /* Space out the links */
+        text-align: left; /* Align text to the left */
+    }
+
+    .header-right input[type="text"] {
+        width: 100%; /* Make the search bar full width */
+        padding: 8px; /* Adjust padding for a better look */
+        box-sizing: border-box; /* Ensure padding is included in the width */
+    }
+
+    .nav1 .header-right input[type="text"] {
+        width: 100%; /* Ensure the input field doesn't overflow */
+    }
 }
 
 /* Hero Section */
@@ -301,6 +361,39 @@ header {
 
 .award img {
     max-width: 100px;
+}
+
+/* For tablets and small screens */
+@media only screen and (max-width: 768px) {
+    .awards-section {
+        padding: 15px; /* Add padding to prevent content from touching the edges */
+        margin: 0 auto; /* Center the section */
+        width: 100%; /* Ensure the section takes up the full width */
+    }
+
+    .awards-section img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* For mobile phones (425px and below) */
+@media only screen and (max-width: 425px) {
+    .awards-section {
+        padding: 10px; /* Further reduce padding on smaller screens */
+        margin: 0 auto; /* Center the section */
+        width: 100%; /* Ensure the section takes up the full width */
+    }
+
+    .awards-section img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .awards-section .text-content {
+        font-size: 14px; /* Reduce font size if necessary */
+        line-height: 1.5; /* Adjust line height for readability */
+    }
 }
 
 /* Advertisement Section */
